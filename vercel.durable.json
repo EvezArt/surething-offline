@@ -1,0 +1,7 @@
+{
+  "version": 2,
+  "name": "evez-operator",
+  "builds": [{"src": "api/index_durable.py", "use": "@vercel/python"}],
+  "routes": [{"src": "/(.*)", "dest": "api/index_durable.py"}],
+  "env": {"PYTHONPATH": "."}
+}
