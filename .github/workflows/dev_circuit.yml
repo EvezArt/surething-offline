@@ -56,7 +56,7 @@ jobs:
             -d '{"event_type":"transformation","lane":"empirical","payload":{"station":"circuit_complete","workflow_run":"${{ github.run_id }}","task_id":"${{ github.event.inputs.task_id }}"}}' || true
       - name: Upload artifact
         if: always()
-        uses: actions/upload-artifact@v4
+        uses: actions/upload-artifact@v7
         with:
           name: circuit-${{ github.run_id }}
           path: /tmp/circuit_result.json
