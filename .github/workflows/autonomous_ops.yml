@@ -62,7 +62,7 @@ jobs:
           echo "FIRE_DETECTED=false" >> $GITHUB_ENV
           grep -q 'FIRE.*True' /tmp/circuit_out.txt 2>/dev/null && echo "FIRE_DETECTED=true" >> $GITHUB_ENV || true
       - name: Commit generated files
-        uses: stefanzweifel/git-auto-commit-action@v5
+        uses: stefanzweifel/git-auto-commit-action@v7
         with:
           commit_message: 'autonomous_ops: auto-generated [skip ci]'
           skip_dirty_check: false

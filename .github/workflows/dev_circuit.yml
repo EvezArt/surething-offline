@@ -61,7 +61,7 @@ jobs:
           name: circuit-${{ github.run_id }}
           path: /tmp/circuit_result.json
           if-no-files-found: ignore
-      - uses: stefanzweifel/git-auto-commit-action@v5
+      - uses: stefanzweifel/git-auto-commit-action@v7
         with:
           commit_message: 'circuit: auto-generated from run ${{ github.run_id }}'
           skip_dirty_check: false
